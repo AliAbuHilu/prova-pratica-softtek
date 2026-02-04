@@ -1,0 +1,1 @@
+ALTER TABLE contacorrente ADD COLUMN salt TEXT(100) NOT NULL DEFAULT '';

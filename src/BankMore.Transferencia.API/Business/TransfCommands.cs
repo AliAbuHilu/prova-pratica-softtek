@@ -1,0 +1,1 @@
+﻿namespace BankMore.Transferencia.API.Commands { public class RealizarTransferenciaCommand { public int ContaOrigem { get; set; } public int ContaDestino { get; set; } public decimal Valor { get; set; } } }

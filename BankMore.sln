@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BA444BF9-7BE4-4BD9-A023-B7B52846AB8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankMore.ContaCorrente.Domain", "src\BankMore.ContaCorrente.Domain\BankMore.ContaCorrente.Domain.csproj", "{6923C43C-5B4D-41AA-A8C1-7CA4B18E2BDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankMore.ContaCorrente.Infrastructure", "src\BankMore.ContaCorrente.Infrastructure\BankMore.ContaCorrente.Infrastructure.csproj", "{41CB379B-6A5C-4126-B7BB-31D0E44F5B5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankMore.ContaCorrente.API", "src\BankMore.ContaCorrente.API\BankMore.ContaCorrente.API.csproj", "{05229985-0B14-44BA-A3AF-C9489684C084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankMore.Transferencia.API", "src\BankMore.Transferencia.API\BankMore.Transferencia.API.csproj", "{1E23C8D8-BA88-48E4-80DE-DD531E2C2F9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6923C43C-5B4D-41AA-A8C1-7CA4B18E2BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6923C43C-5B4D-41AA-A8C1-7CA4B18E2BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6923C43C-5B4D-41AA-A8C1-7CA4B18E2BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6923C43C-5B4D-41AA-A8C1-7CA4B18E2BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41CB379B-6A5C-4126-B7BB-31D0E44F5B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41CB379B-6A5C-4126-B7BB-31D0E44F5B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41CB379B-6A5C-4126-B7BB-31D0E44F5B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41CB379B-6A5C-4126-B7BB-31D0E44F5B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05229985-0B14-44BA-A3AF-C9489684C084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05229985-0B14-44BA-A3AF-C9489684C084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05229985-0B14-44BA-A3AF-C9489684C084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05229985-0B14-44BA-A3AF-C9489684C084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E23C8D8-BA88-48E4-80DE-DD531E2C2F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E23C8D8-BA88-48E4-80DE-DD531E2C2F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E23C8D8-BA88-48E4-80DE-DD531E2C2F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E23C8D8-BA88-48E4-80DE-DD531E2C2F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6923C43C-5B4D-41AA-A8C1-7CA4B18E2BDC} = {BA444BF9-7BE4-4BD9-A023-B7B52846AB8C}
+		{41CB379B-6A5C-4126-B7BB-31D0E44F5B5D} = {BA444BF9-7BE4-4BD9-A023-B7B52846AB8C}
+		{05229985-0B14-44BA-A3AF-C9489684C084} = {BA444BF9-7BE4-4BD9-A023-B7B52846AB8C}
+		{1E23C8D8-BA88-48E4-80DE-DD531E2C2F9D} = {BA444BF9-7BE4-4BD9-A023-B7B52846AB8C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,47 @@
+﻿version: '3.4'
+
+services:
+  # API de Autenticação e Conta (5111)
+  bankmore-auth-api:
+    build:
+      context: .
+      dockerfile: src/BankMore.ContaCorrente.API/Dockerfile 
+    ports:
+      - "5111:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      # O Data Source deve apontar para onde o volume será montado no container
+      - ConnectionStrings__DefaultConnection=Data Source=/app/database/contacorrente.db
+    volumes:
+      # Mapeia sua pasta física (./database) para a pasta interna do container (/app/database)
+      - ./database:/app/database
+
+  # API de Transferência (5047)
+  bankmore-transfer-api:
+    build:
+      context: .
+      dockerfile: src/BankMore.Transferencia.API/Dockerfile
+    ports:
+      - "5047:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - kafka
+
+  # Infraestrutura (Kafka para o diferencial de assincronicidade)
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
